@@ -8,15 +8,16 @@
 ### Association
 - has_many :groups_users
 - has_many :commants
+- has_many :groups
 
 ## groupテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|integer|null: false, foreign_key: trule|
+|name|string|null: false, foreign_key: trule|
 ### Association
 - has_many :groups_users
 - has_many :comments
-- has_many :
+- has_many :users
 
 ## groups_usersテーブル
 |Column|Type|Options|
