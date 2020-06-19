@@ -4,36 +4,36 @@
 |------|----|-------|
 |email|string|null: false|
 |password|string|null: false|
-|usersname|string|null: false|
+|name|string|null: false|
 ### Association
-- has_many :groups
+- has_many :groups_users
 - has_many :commants
 
 ## groupテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: trule|
-|group_id|integer|null: false, foreign_key: true|
+|name|integer|null: false, foreign_key: trule|
 ### Association
 - has_many :groups_users
-- has_many :comment
-- has_many :users
+- has_many :comments
+- has_many :
 
 ## groups_usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
 ### Association
 - belongs_to :group
-- belongs_to :users
+- belongs_to :user
 
 ## commentsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|txet|null: false|
-|user_id|integer|null: fales, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|text|txet||
+|image|txet||
+|user_id|references|null: fales, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
 ### Association
 - belongs_to :group
 - belongs_to :user
