@@ -31,7 +31,7 @@
           }
         }
       }
-      a.edti {
+      &__edti {
         display: block;
         line-height: 40px;
         font-size: 16px;
@@ -39,9 +39,12 @@
         height: 40px;
         width: 72px;
         padding: 0 20px;
-        border: 2px solid #38aef0;
+        border: 1px solid #38aef0;
         color: #38aef0;
-        text-decoration: none;
+        a {
+          color: #38aef0;
+          text-decoration: none;
+        }
       }
     }
     &__message {
@@ -141,7 +144,7 @@
           li.icon {
             margin-right: 5px;
             i {
-              color:#ffffff;
+              color: #ffffff;
             }
           }
         }
