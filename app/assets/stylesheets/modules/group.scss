@@ -41,14 +41,14 @@ li {
     padding-left: 20px;
     box-sizing: border-box;
   }
-  &__rightField {
-    width: 70%;
-  }
   &__label {
     display: block;
     line-height: 50px;
     font-weight: bold;
     text-align: right;
+  }
+  &__rightField {
+    width: 70%;
   }
   &__input {
     width: 100%;
