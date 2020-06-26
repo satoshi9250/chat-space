@@ -52,6 +52,7 @@
       height: calc(100vh - 190px);
       width: calc(100vw - 300px);
       padding: 35px 40px;
+      overflow: scroll;
       &__group {
         margin-bottom: 46px;
         &__list {
@@ -67,9 +68,15 @@
             padding-left: 10px;
           }
         }
-        p.text {
-          color:#434A54;
-          font-size: 14px;
+        &__text-box {
+          margin-bottom: 46px;
+          p.text {
+            color:#434A54;
+            font-size: 14px;
+          }
+          .Message__image{
+            height: 300px;
+          }
         }
       }
     }
@@ -77,41 +84,45 @@
       background-color: #d2d2d2;
       height: 90px;
       width: calc(100vw - 300px);
-      padding: 10px 40px;
+      padding: 20px 40px;
       display: flex;
       justify-content: space-between;
-      &__box {
-        height: 50px;
+      .Form {
+        display: flex;
         width: 100%;
-        background-color: #fff;
-        position: relative;
-        &__input {
-          border: none;
+        .chat-main__form__box {
           height: 50px;
           width: 100%;
-          padding: 0 45px 0 15px;
+          background-color: #fff;
+          position: relative;
+          .Form__inputContent{
+            border: none;
+            height: 50px;
+            width: 100%;
+            padding: 0 45px 0 15px;
+          }
+          .Form__inputImage {
+            height: 50px;
+            position: absolute;
+            right: 10px;
+            .Form__icon {
+              line-height: 50px;
+              font-size: 25px;
+            }
+            .Hidden {
+              display: none;
+            }
+          }
         }
-        &__inputimage {
+        &__submit {
+          background-color: #38aef0;
+          color: #fff;
+          font-size: 16px;
+          padding: 0 30px;
           height: 50px;
-          position: absolute;
-          right: 10px;
-          i.fa-image {
-            line-height: 50px;
-            font-size: 25px;
-          }
-          .image {
-            display: none;
-          }
+          margin-left: 15px;
+          border: none;
         }
-      }
-      &__submit-btn {
-        background-color: #38aef0;
-        color: #fff;
-        font-size: 16px;
-        padding: 0 30px;
-        height: 50px;
-        margin-left: 15px;
-        border: none;
       }
     }
   }
