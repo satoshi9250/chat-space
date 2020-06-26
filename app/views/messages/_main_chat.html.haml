@@ -1,22 +1,22 @@
 .chat-main
   .chat-main__header
     .chat-main__header__box
-      .chat-main__header__box__name test
+      .chat-main__header__box__name
+        = @group.name
       %ul.memederlist 
         Member:
-        %li.memeder masa
+        %li.memeder
+        = current_user.name
     .chat-main__header__edti
-      = link_to "Edit"
+      = link_to edit_group_path(@group) do
+        Edit
   .chat-main__message
-    .chat-main__message__group
-      .chat-main__message__group__list
-        .chat-main__message__group__list__name masa
-        .chat-main__message__group__list__date 2019/11/20(wed) 17:43:01
-      %p.text おはよう！
+    = render @messages
   .chat-main__form
-    .chat-main__form__box
-      %input.chat-main__form__box__input{ type:  "text", placeholder: "type a message", }
-      %label.chat-main__form__box__inputimage
-        = icon('fas', 'image')
-        %input.image{type: "file"}
-    %input.chat-main__form__submit-btn{type: "submit"}
+    = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
+      .chat-main__form__box
+        = f.text_field :content, class: 'Form__inputContent', placeholder: 'type a message'
+        = f.label :image, class: 'Form__inputImage' do
+          = icon('far', 'image', class: 'Form__icon')
+          = f.file_field :image, class: 'Hidden'
+      = f.submit 'Send', class: 'Form__submit'

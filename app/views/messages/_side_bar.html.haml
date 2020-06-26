@@ -5,7 +5,7 @@
         = current_user.name
       %ul.iconlist
         %li.icon
-          = link_to new_group_path(1) do
+          = link_to new_group_path do
             = icon('fas','edit')
         %li.icon
           = link_to edit_user_path(current_user) do
@@ -13,8 +13,8 @@
   .chat-side__group
     - current_user.groups.each do |group|
       .cah-side__group__box
-        = link_to '#' do
+        = link_to group_messages_path(group) do
           .chat-side__group__box__name
             = group.name
           .chat-side__group__box__message
-            メッセージはまだありません
+            = group.show_last_message
