@@ -12,7 +12,7 @@
             = icon('fas','cog')
   .chat-side__group
     - current_user.groups.each do |group|
-      .cah-side__group__box
+      .chat-side__group__box
         = link_to group_messages_path(group) do
           .chat-side__group__box__name
             = group.name
