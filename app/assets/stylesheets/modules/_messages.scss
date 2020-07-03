@@ -20,6 +20,7 @@
         &__name {
           color: #333333;
           margin-top: 35px;
+          font-size: 20px;
         }
         ul.memederlist  {
           color: #999999;
@@ -28,6 +29,7 @@
           display: flex;
           li.memeder {
             color: #999999;
+            margin-right: 5px;
           }
         }
       }
@@ -37,7 +39,6 @@
         font-size: 16px;
         margin-top: 28px;
         height: 40px;
-        width: 72px;
         padding: 0 20px;
         border: 1px solid #38aef0;
         color: #38aef0;
@@ -81,10 +82,9 @@
       }
     }
     &__form {
-      background-color: #d2d2d2;
+      background-color: #dddddd;
       height: 90px;
-      width: calc(100vw - 300px);
-      padding: 20px 40px;
+      padding: 20px 50px 20px 40px;
       display: flex;
       justify-content: space-between;
       .Form {
@@ -148,11 +148,11 @@
           font-size: 16px;
           font-weight: bold;
         }
-        ul.iconlist {
+        .iconlist {
           width: 60px;
           display: flex;
           justify-content: flex-end;
-          li.icon {
+          .icon {
             margin-right: 5px;
             i {
               color: #ffffff;
